@@ -14,5 +14,3 @@ mybatis-plus:
     db-config:
       logic-delete-value: 1  # 状态已删除
       logic-not-delete-value: 0  #状态未删除
-logging:
-  config: classpath:log4j2-${spring.profiles.active}.xml

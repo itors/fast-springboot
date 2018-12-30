@@ -6,3 +6,5 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: root
+logging:
+  config: classpath:log4j2-dev.xml
