@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: fast-springboot
+  datasource:
+    url: jdbc:mysql://localhost:3306/springbootTest?useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root

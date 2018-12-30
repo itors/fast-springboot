@@ -31,6 +31,13 @@ public class UserController {
     public Result<UserInfo> list(HttpServletRequest request, HttpServletResponse response){
          return ResultUtils.success(userService.getUserList());
     }
+
+    /**
+     * 参数未传入后台
+     * @param pageSize
+     * @param page
+     * @return
+     */
     @RequestMapping("/listByPage")
     public Result<UserInfo> listByPage(Integer pageSize,Integer page){
         return ResultUtils.success(userService.getUserListByPage());

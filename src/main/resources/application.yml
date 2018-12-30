@@ -2,13 +2,8 @@ server:
   port: 8080
 #------------ spring ---------------#
 spring:
-  application:
-    name: fast-springboot
-  datasource:
-    url: jdbc:mysql://localhost:3306/springbootTest?useSSL=false&serverTimezone=UTC
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    password: root
+  profiles:
+    active: dev
   mvc:    # mvc.throw-exception-if-no-handler-found 和 resources.add-mappings设置 系统统一异常处理
     throw-exception-if-no-handler-found: true
   resources:
@@ -19,3 +14,5 @@ mybatis-plus:
     db-config:
       logic-delete-value: 1  # 状态已删除
       logic-not-delete-value: 0  #状态未删除
+logging:
+  config: classpath:log4j2-${spring.profiles.active}.xml
