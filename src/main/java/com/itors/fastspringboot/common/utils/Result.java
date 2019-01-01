@@ -6,13 +6,12 @@ package com.itors.fastspringboot.common.utils;
  */
 public class Result<T> {
 
-    private int code;
+    private Integer code;
     private String msg;
     private T data;
 
     public Result() {
     }
-
     public Result(ResultCode resultCode, T data) {
         this(resultCode);
         this.data = data;

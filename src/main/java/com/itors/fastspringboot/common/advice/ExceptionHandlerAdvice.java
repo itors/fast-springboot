@@ -30,22 +30,22 @@ public class ExceptionHandlerAdvice {
          * 404
          */
         if (ex instanceof NoHandlerFoundException) {
-            return ResultUtils.warn(ResultCode.NOT_FONUD);
+            return ResultUtils.error(ResultCode.NOT_FONUD);
         /**
          *  参数异常
          */
         } else if( ex instanceof MissingServletRequestParameterException) {
-            return ResultUtils.warn(ResultCode.PARAMETER_ERROR);
+            return ResultUtils.error(ResultCode.PARAMETER_ERROR);
         /**
          *  无权限
          */
         }else if(ex instanceof FastSptingbootException){
-            return ResultUtils.warn(((FastSptingbootException) ex).getResultCode());
+            return ResultUtils.error(((FastSptingbootException) ex).getResultCode());
         /**
          *  其他（视为500 系统错误）
          */
         }else{
-            return ResultUtils.warn(ResultCode.SYS_ERROR);
+            return ResultUtils.error(ResultCode.SYS_ERROR);
         }
     }
 

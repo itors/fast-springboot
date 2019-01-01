@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper extends SuperMapper<UserInfo>{
 
+    Integer updateByUserId(UserInfo userInfo);
+
 
 
 }

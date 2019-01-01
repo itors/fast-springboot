@@ -12,13 +12,16 @@ public enum  ResultCode {
     NOT_FONUD(404,"接口不存在"),
     SYS_ERROR(500, "系统异常"),
     NO_AUTHO(401,"无权限访问"),
-    PARAMETER_ERROR(10101, "参数错误"),
-    SUCCESS(0, "请求成功"),
+    SUCCESS(200, "请求成功"),
 
     /**
      * 业务处理类
      */
-    PASSWORD_ERROR(10001, "用户名或密码错误");
+    PARAMETER_ERROR(10001, "未登录"),
+    TOKEN_ERROR(10002, "参数错误"),
+    UPDATE_ERROR(10003, "更新失败"),
+    INSERT_ERROR(10004, "新增失败"),
+    DEL_ERROR(10005, "删除失败");
 
 
     private int code;

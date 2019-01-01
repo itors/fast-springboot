@@ -1,15 +1,18 @@
 package com.itors.fastspringboot.entity;
 
-import lombok.Data;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 
 import java.io.Serializable;
 
 public class UserInfo implements Serializable {
+
     private static final long serialVersionUID = 1L;
     private Integer id;
     private String userId;
     private String userName;
     private String passWord;
+
+    @TableLogic
     private Integer status;
 
     public Integer getId() {

@@ -16,8 +16,9 @@ public class ResultUtils {
         return result;
     }
 
-    public static Result warn(ResultCode resultCode) {
+    public static Result error(ResultCode resultCode) {
         return new Result(resultCode);
     }
+
 
 }

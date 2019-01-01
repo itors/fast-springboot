@@ -10,7 +10,9 @@ spring:
     add-mappings: false
 #------------ mybatis ---------------#
 mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
   global-config:
     db-config:
       logic-delete-value: 1  # 状态已删除
       logic-not-delete-value: 0  #状态未删除
+
